@@ -8,6 +8,10 @@
         - `FAME-MT Dataset` was made available in June 2024 through `EAMT 2024`. See the paper: "FAME-MT Dataset: Formality Awareness Made Easy for Machine Translation Purposes."
 - Formal and informal datasets are concatenated and shuffled. These amount to about 40K points of training data for each formality class.
 
+## Tech Stack
+- transformers: AutoTokenizer, AutoModelForSeq2SeqLM
+- evaluate: sacrebleu
+
 ## Helpful Tutorials I referenced throughout project
 - SpeechT5 Model Docs: https://huggingface.co/docs/transformers/en/model_doc/speecht5
     - If you are interested in Text-to-Speech see the model card for `SpeechT5ForTextToSpeech`.
