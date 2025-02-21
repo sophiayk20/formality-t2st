@@ -5,9 +5,9 @@ import soundfile as sf
 import os
 import torch
 
-TEXT_PATH = "/content/drive/MyDrive/formality/base-formal-outputs.txt"
-OUTPUT_DIR = "/content/drive/MyDrive/formality/base-base"
-SPEECHT5_MODEL_PATH = "sophiayk20/speecht5_tts_voxpopuli_es"
+TEXT_PATH = ""
+OUTPUT_DIR = ""
+SPEECHT5_MODEL_PATH = ""
 
 def generate_speech(TEXT_DIR, OUTPUT_DIR, SPEECHT5_MODEL_PATH):
     os.makedirs(OUTPUT_DIR, exist_ok=True)
