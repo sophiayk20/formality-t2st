@@ -1,0 +1,32 @@
+from datasets import load_dataset
+from transformers import SpeechT5Processor, SpeechT5HifiGan, SpeechT5ForTextToSpeech
+from tqdm import tqdm
+import soundfile as sf
+import os
+import torch
+
+TEXT_PATH = ""
+OUTPUT_DIR = ""
+SPEECHT5_MODEL_PATH = ""
+
+def generate_speech(TEXT_DIR, OUTPUT_DIR, SPEECHT5_MODEL_PATH):
+  os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+  model = SpeechT5ForTextToSpeech.from_pretrained(SPEECHT5_MODEL_PATH)
+  processor = SpeechT5Processor.from_pretrained("microsoft/speecht5_tts")
+  vocoder = SpeechT5HifiGan.from_pretrained("microsoft/speecht5_hifigan")
+
+  embeddings_dataset = load_dataset("Matthijs/cmu-arctic-xvectors", split="validation")
+  speaker_embeddings = torch.tensor(embeddings_dataset[7306]["xvector"]).unsqueeze(0)
+
+  with open(TEXT_PATH, "r") as f:
+    spanish_lines = [line.rstrip() for line in f.readlines()]
+
+  for idx, spanish_line in enumerate(tqdm(spanish_lines)):
+    inputs = processor(text=spanish_line, return_tensors="pt")
+
+    speech = model.generate_speech(inputs["input_ids"], speaker_embeddings=speaker_embeddings, vocoder=vocoder)
+
+    sf.write(f"{OUTPUT_DIR}/{idx}.wav", speech.numpy(), samplerate=16000)
+
+generate_speech(TEXT_PATH, OUTPUT_DIR, SPEECHT5_MODEL_PATH)
