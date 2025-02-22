@@ -11,6 +11,7 @@
 ## Tech Stack
 - transformers: AutoTokenizer, AutoModelForSeq2SeqLM
 - evaluate: sacrebleu
+- `fairseq2`, `stopes`, `sonar-space (SONAR)`
 
 ## Helpful Tutorials I referenced throughout project
 - SpeechT5 Model Docs: https://huggingface.co/docs/transformers/en/model_doc/speecht5
