@@ -12,6 +12,8 @@
 - transformers: AutoTokenizer, AutoModelForSeq2SeqLM
 - evaluate: sacrebleu
 - `fairseq2`, `stopes`, `sonar-space (SONAR)`
+- `soundfile`, `pyannote`
+- `coqui-ai/tts`
 
 ## Helpful Tutorials I referenced throughout project
 - SpeechT5 Model Docs: https://huggingface.co/docs/transformers/en/model_doc/speecht5
