@@ -1,4 +1,4 @@
-# Senior Thesis
+# Controlling Formality in Text-to-Speech Translation
 
 ## Datasets
 - Formality Datasets (Text-to-Text Modality)
