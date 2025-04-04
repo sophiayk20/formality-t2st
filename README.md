@@ -25,6 +25,12 @@ I did not design HTML / CSS for the page and all rights for that portion of the 
         - `FAME-MT Dataset` was made available in June 2024 through `EAMT 2024`. See the paper: "FAME-MT Dataset: Formality Awareness Made Easy for Machine Translation Purposes." The dataset is available here: https://github.com/laniqo-public/fame-mt.
 - Formal and informal datasets are concatenated and shuffled. These amount to about 40K points of training data for each formality class.
 
+## New Datasets Released Through This Project
+- 8 datasets for DE, ES, FR, IT formal / informal speech with 9K train, 1K validation for a total of 10K for each formal / informal subset of each language pair.
+- `sophiayk20/xtts-{FORMALITY}-{LANG_CODE}`
+
+Models used in the paper are also made available in the HuggingFace Hub.
+
 ## Helpful Tutorials I referenced throughout project
 - [SpeechT5 Model Docs](https://huggingface.co/docs/transformers/en/model_doc/speecht5)
     - If you are interested in Text-to-Speech see the model card for `SpeechT5ForTextToSpeech`.
