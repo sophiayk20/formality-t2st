@@ -15,6 +15,10 @@
 - `soundfile`, `pyannote`
 - `coqui-ai/tts`
 
+## Demo Page
+Demo page is available at https://sophiayk20.github.io/tts-formality-translation.
+I did not design HTML / CSS for the page and all rights for that portion of the code goes to their respectful authors.
+
 ## Helpful Tutorials I referenced throughout project
 - SpeechT5 Model Docs: https://huggingface.co/docs/transformers/en/model_doc/speecht5
     - If you are interested in Text-to-Speech see the model card for `SpeechT5ForTextToSpeech`.
