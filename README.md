@@ -13,6 +13,7 @@
 - evaluate: sacrebleu
 - `fairseq2`, `stopes`, `sonar-space (SONAR)`
 - `soundfile`, `pyannote`
+- `ParlerTTS`
 - `coqui-ai/tts`
 
 ## Demo Page
