@@ -1,9 +1,242 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
-  <head>
-    <title>Controlling Formality in Text-to-Speech Translation</title>
-  </head>
-  <body>
-    <h1>Audio Demo</h1>
-  </body>
+	<head>
+		<title>Controlling Formality in Text-to-Speech Translation</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h2><center>AUDIO PROMPT TUNING FOR UNIVERSAL SOUND SEPARATION</center></h2>
+										</header>
+										<p><center>Authors: Yeeun Kang</center></p>
+										<p><center>Senior Thesis for Bachelor of Science Degree in Computer Science at Yale University</center></p>
+										<p><center>Email: sophia.kang@yale.edu</center></p>
+										<p>
+											<center><a href="https://github.com/sophiayk20/tts-formality-translation">Github: https://github.com/sophiayk20/tts-formality-translation</a></center>
+										</p>
+									</div>
+								</section>
+
+							<!-- Section -->
+                                <section id="speech-tuning">
+                                    <header class="major">
+                                        <h2>Speech Tuning with Parler TTS and XTTS</h2>
+                                    </header>
+                                </section>
+
+								<section id="demo_esc50">
+									<header class="major">
+										<h2>Abstract & Demo</h2>
+									</header>
+									
+									<div class="posts">
+										<article>
+											<div class="content">
+				
+												<p> 
+													Universal sound separation (USS) is a task to separate arbitrary sounds from an audio mixture. Existing USS systems are capable of separating arbitrary sources, given a few examples of the target sources as queries. However, separating arbitrary sounds with a single system is challenging, and the robustness is not always guaranteed. 
+												</p>
+												<p>
+													In this work, we propose audio prompt tuning (APT), a simple yet effective approach to enhance existing USS systems. Specifically, APT improves the separation performance of specific sources through training a small number of prompt parameters with limited data, while maintaining the generalization of the USS model by keeping its parameters frozen. 
+												</p>
+												<p>
+													We evaluate the proposed method on MUSDB18 and ESC-50 datasets. Compared with the baseline model, APT can improve the signal-to-distortion ratio performance by 0.67 dB and 2.06 dB using the full training set of two datasets. Moreover, APT with only 5 audio samples even outperforms the baseline systems utilizing full training data on the ESC-50 dataset, indicating the great potential of few-shot APT.
+												</p>
+											</div>
+										</article>
+										<article>
+											<table cellspacing="100" style="width: 85%">
+												<thead>
+													<tr>
+														<th><center>Class</center> </th>						
+														<th><center>Mixture</center> </th>
+														<th><center>Separated</center> </th>
+														<th><center>Ground-truth</center> </th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr style="border-top:1px solid black">
+														<td><center>Pouring water</center></td>
+														<td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/mixtures/4-187504-B-17.wav" ></audio></td>
+														  <td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/separated/4-187504-B-17.wav" ></audio></td>
+														  <td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/ground_truth/4-187504-B-17.wav" ></audio></td>
+													</tr>
+													
+												</tbody>
+																								<tbody>
+													<tr style="border-top:1px solid black">
+														<td><center>Crying_baby_0</center></td>
+														<td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/mixtures/4-59579-A-20.wav" ></audio></td>
+														  <td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/separated/4-59579-A-20.wav" ></audio></td>
+														  <td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/ground_truth/4-59579-A-20.wav" ></audio></td>
+													</tr>
+													
+												</tbody>
+																								<tbody>
+													<tr style="border-top:1px solid black">
+														<td><center>Crying_baby_1</center></td>
+														<td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/mixtures/4-59579-B-20.wav" ></audio></td>
+														  <td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/separated/4-59579-B-20.wav" ></audio></td>
+														  <td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/ground_truth/4-59579-B-20.wav" ></audio></td>
+													</tr>
+													
+												</tbody>
+																								<tbody>
+													<tr style="border-top:1px solid black">
+														<td><center>Cat</center></td>
+														<td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/mixtures/4-133047-A-5.wav" ></audio></td>
+														  <td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/separated/4-133047-A-5.wav" ></audio></td>
+														  <td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/ground_truth/4-133047-A-5.wav" ></audio></td>
+													</tr>
+													
+												</tbody>
+																								<tbody>
+													<tr style="border-top:1px solid black">
+														<td><center>Frog</center></td>
+														<td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/mixtures/4-99644-A-4.wav" ></audio></td>
+														  <td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/separated/4-99644-A-4.wav" ></audio></td>
+														  <td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/ground_truth/4-99644-A-4.wav" ></audio></td>
+													</tr>
+													
+												</tbody>
+																								<tbody>
+													<tr style="border-top:1px solid black">
+														<td><center>Siren_0</center></td>
+														<td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/mixtures/4-80761-A-42.wav" ></audio></td>
+														  <td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/separated/4-80761-A-42.wav" ></audio></td>
+														  <td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/ground_truth/4-80761-A-42.wav" ></audio></td>
+													</tr>
+													
+												</tbody>
+																								<tbody>
+													<tr style="border-top:1px solid black">
+														<td><center>Siren_1</center></td>
+														<td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/mixtures/4-90014-A-42.wav" ></audio></td>
+														  <td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/separated/4-90014-A-42.wav" ></audio></td>
+														  <td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/ground_truth/4-90014-A-42.wav" ></audio></td>
+													</tr>
+													
+												</tbody>
+																								</tbody>
+																								<tbody>
+													<tr style="border-top:1px solid black">
+														<td><center>Church_bells</center></td>
+														<td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/mixtures/4-125825-A-46.wav" ></audio></td>
+														  <td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/separated/4-125825-A-46.wav" ></audio></td>
+														  <td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/ground_truth/4-125825-A-46.wav" ></audio></td>
+													</tr>
+													
+												</tbody>
+																								</tbody>
+																								<tbody>
+													<tr style="border-top:1px solid black">
+														<td><center>Door_wood_creaks</center></td>
+														<td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/mixtures/4-108352-A-33.wav" ></audio></td>
+														  <td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/separated/4-108352-A-33.wav" ></audio></td>
+														  <td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/ground_truth/4-108352-A-33.wav" ></audio></td>
+													</tr>
+													
+												</tbody>
+																								</tbody>
+																								<tbody>
+													<tr style="border-top:1px solid black">
+														<td><center>Footsteps</center></td>
+														<td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/mixtures/4-117630-A-25.wav" ></audio></td>
+														  <td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/separated/4-117630-A-25.wav" ></audio></td>
+														  <td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/ground_truth/4-117630-A-25.wav" ></audio></td>
+													</tr>
+													
+												</tbody>
+																								</tbody>
+																								<tbody>
+													<tr style="border-top:1px solid black">
+														<td><center>Toilet_flush</center></td>
+														<td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/mixtures/4-119720-A-18.wav" ></audio></td>
+														  <td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/separated/4-119720-A-18.wav" ></audio></td>
+														  <td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/ground_truth/4-119720-A-18.wav" ></audio></td>
+													</tr>
+													
+												</tbody>
+																								</tbody>
+																								<tbody>
+													<tr style="border-top:1px solid black">
+														<td><center>Thunderstorm</center></td>
+														<td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/mixtures/4-125071-A-19.wav" ></audio></td>
+														  <td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/separated/4-125071-A-19.wav" ></audio></td>
+														  <td><audio controls class="audio-player" preload="metadata" style="width:220px;">
+															<source src="demos_audios/ground_truth/4-125071-A-19.wav" ></audio></td>
+													</tr>
+													
+												</tbody>
+	
+											</table>
+										</article>
+									</div>
+								</section>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>

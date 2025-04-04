@@ -106,6 +106,5 @@ trainer = Seq2SeqTrainer(
 
 torch.cuda.empty_cache() #ensure torch cache is empty and ready
 
-#trainer.evaluate(max_length=max_target_length) #this will return a super super low bleu score, if you breakpoint the compute metrics function you'll see the decoded predictions are not in the target language but in an assortment of random ones, changing for every sentence
 trainer.train() #training functions fine, however if you attempt to use the saved model after training from any other lang pair but en - es it will be messed up
 trainer.push_to_hub()
