@@ -8,10 +8,9 @@
 from transformers import SpeechT5Processor, SpeechT5ForTextToSpeech, Seq2SeqTrainingArguments, Seq2SeqTrainer
 from datasets import load_dataset, Audio
 from collections import defaultdict
+from speechbrain.inference import EncoderClassifier
 import os
 import torch
-from speechbrain.inference import EncoderClassifier
-
 
 processor = SpeechT5Processor.from_pretrained("microsoft/speecht5_tts")
 model = SpeechT5ForTextToSpeech.from_pretrained("microsoft/speecht5_tts")
