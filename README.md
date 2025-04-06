@@ -1,7 +1,7 @@
 # Controlling Formality in Text-to-Speech Translation
 
 ## Demo Page
-Demo page is available at [this link](https://sophiayk20.github.io/tts-formality-translation).
+Demo page is available at [this link](https://sophiayk20.github.io/formality-t2st).
 I did not design HTML / CSS for the page and all rights for that portion of the code goes to their respectful authors.
 
 ## Source Code
@@ -11,10 +11,10 @@ All are Python or shell scripts.
 ## Tech Stack
 - transformers: AutoTokenizer, AutoModelForSeq2SeqLM
 - evaluate: sacrebleu
-- `fairseq2`, `stopes`, `sonar-space (SONAR)`
-- `soundfile`, `pyannote`
-- `ParlerTTS`
-- `coqui-ai/tts`
+- `fairseq2`, `stopes`, `sonar-space (SONAR)` (speech evaluation)
+- `soundfile`, `pyannote`, `pydub`, `librosa` (audio silence detection & trimming)
+- `ParlerTTS` (English formal and informal speech generation)
+- `coqui-ai/tts` (XTTS for target voice conversion and speech synthesis)
 
 ## Models
 - Text-to-Text Translation Model: `M2M-100`
