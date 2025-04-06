@@ -4,6 +4,10 @@
 Demo page is available at [this link](https://sophiayk20.github.io/tts-formality-translation).
 I did not design HTML / CSS for the page and all rights for that portion of the code goes to their respectful authors.
 
+## Source Code
+Source code is in `/datasets`, `/evaluate`, `/finetune`, `/formality-tuning` and `generate`.
+All are Python or shell scripts.
+
 ## Tech Stack
 - transformers: AutoTokenizer, AutoModelForSeq2SeqLM
 - evaluate: sacrebleu
