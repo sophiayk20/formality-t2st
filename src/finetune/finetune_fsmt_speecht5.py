@@ -121,7 +121,7 @@ class TTSDataCollatorWithPadding:
         return batch
     
 data_collator = TTSDataCollatorWithPadding(processor=processor)
-model = SpeechT5ForTextToSpeech.from_pretrained("sophiayk20/speecht5_tts_voxpopuli_es")
+model = SpeechT5ForTextToSpeech.from_pretrained(f"sophiayk20/speecht5_tts_voxpopuli_{LANG_CODE}")
 
 # disable cache during training since it's incompatible with gradient checkpointing
 model.config.use_cache = False
