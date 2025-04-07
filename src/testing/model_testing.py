@@ -4,9 +4,8 @@
     `pip install -q datasets`
 """
 
-from transformers import SpeechT5ForTextToSpeech, SpeechT5Processor
+from transformers import SpeechT5ForTextToSpeech, SpeechT5Processor, SpeechT5HifiGan
 from datasets import load_dataset
-from transformers import SpeechT5HifiGan
 from IPython.display import Audio
 import torch
 
