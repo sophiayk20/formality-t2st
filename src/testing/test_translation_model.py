@@ -7,6 +7,7 @@ from tqdm import tqdm
 import torch
 import os
 
+# run example: test_translation_model("facebook/m2m100_418M", "sophiayk20/telephony-formal-de", "de", "B", "formal")
 def test_translation_model(model_name, dataset_name, target_lang, config_letter, formality):
   # Load pre-trained model and tokenizer
   model_name = model_name

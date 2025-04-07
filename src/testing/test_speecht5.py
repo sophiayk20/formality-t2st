@@ -33,7 +33,7 @@ for k, v in speaker_indices.items():
   print(f"k: {k} min: {min(v)} max: {max(v)}")
   assert(len(v) == 150)
 
-# function
+# Run example: test_speecht5("sophiayk20/speecht5_tts_formal_es", "es", "B", "F", "formal")
 def test_speecht5(model_name, target_lang, text_config, speech_config, formality):
   device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')
   model = SpeechT5ForTextToSpeech.from_pretrained(model_name)
