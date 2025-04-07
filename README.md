@@ -5,8 +5,8 @@ Demo page is available at [this link](https://sophiayk20.github.io/formality-t2s
 I did not design HTML / CSS for the page and all rights for that portion of the code goes to their respectful authors.
 
 ## Source Code
-Source code is in `/datasets`, `/evaluate`, `/finetune`, `/formality-tuning` and `generate`.
-All are Python or shell scripts.
+Source code is in `/src`.
+All are code primarily written in Python, PyTorch, and shell scripts.
 
 ## Tech Stack
 - transformers: AutoTokenizer, AutoModelForSeq2SeqLM
