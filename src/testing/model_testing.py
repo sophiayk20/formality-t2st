@@ -1,5 +1,6 @@
 """
     Code for checking if TTS model produces valid speech.
+    Uses a random xvector from Matthijs/cmu-arctic-xvectors database.
     `pip install -q datasets`
 """
 
